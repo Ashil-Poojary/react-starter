@@ -5,6 +5,7 @@ import { LOGIN, REGISTRATION, DASHBOARD } from './routes';
 import NotFound from '../pages/Auth/NotFound';
 import { useUserContext } from '../context/UserContext';
 import { Navigate } from 'react-router-dom';
+import MainLayout from '../layouts/MainLayout';
 
 const routeBuilder = (isLogedIn:boolean) => {
 
@@ -22,6 +23,15 @@ const routeBuilder = (isLogedIn:boolean) => {
   
   return [
     {
+        element:<MainLayout/>,
+        children:[
+          {
+            path: "/",
+            element: <DashBoard/>,
+          },
+        ],
+    },
+    {
         element:<AuthLayout/>,
         children:[
             {
@@ -35,9 +45,13 @@ const routeBuilder = (isLogedIn:boolean) => {
         ],
     },
 
+
+   
+
     {
         element:<OpenLayout/>,
         children:[
+        
             {
                 path: "*",
                 element: isLogedIn ? <NotFound /> : <Navigate to={LOGIN} />,
