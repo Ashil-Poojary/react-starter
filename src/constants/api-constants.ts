@@ -1,0 +1,48 @@
+// export const KEY_X_AUTH_TOKEN = "x-auth-token";
+export const KEY_X_AUTH_TOKEN = "jwt";
+export const KEY_X_REFRESH_TOKEN = "refreshToken";
+
+export const SUCCESS_RESPONSE = 1001;
+export const FAILURE_RESPONSE = -1;
+export const MOBILE_NOT_VERIFIED = 1002;
+export const EMAIL_NOT_VERIFIED = 1002;
+
+export const RECORDS_PER_PAGE = [15,50,100];
+export const RECORDS_LIMIT = RECORDS_PER_PAGE[0];
+
+
+
+
+export const DOWNLOAD_MOR_FILE_URL = "case/download-sample-agreement";
+
+
+
+
+
+
+export enum FileTypes {
+  CLAIMANT_VAKALATNAMA =1,
+  RESPONDENT_VAKALATNAMA=2,
+  CLAIMANT_AFFIDAVIT =3,
+  FIRST_PARTY_AFFIDAVIT=4,
+  RESPONDENT_AFFIDAVIT=5,
+  SECOND_PARTY_AFFIDAVIT =6,
+  MEDIATOR_DISCLOSURE_STATEMENT_AND_CONSENT_FORM=7,
+  CONCILIATOR_DECLARATION=8,
+  ARBITRATOR_DECLARATION=9,
+  CONSENT_FORM=10,
+  STANDARDISED_AGREEMENT=11,
+}
+
+export enum FileUploadApiType{
+    CASE,
+    USER,
+    KYC,
+    REUPLOAD_AGREEMENT,
+}
+
+
+
+
+
+
