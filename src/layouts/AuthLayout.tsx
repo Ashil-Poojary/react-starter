@@ -1,11 +1,15 @@
 import React, { Suspense } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 import { DASHBOARD } from '../routes/routes'
+import { useUserContext } from "../context/UserContext";
 
 
 const AuthLayout = () => {
 
     const { isLoggedIn } = useUserContext()
+
+    console.log(isLoggedIn);
+    
 
     if (!isLoggedIn)
         return (
@@ -21,7 +25,4 @@ const AuthLayout = () => {
 
 
 export default AuthLayout
-function useUserContext(): { isLoggedIn: any } {
-    throw new Error('Function not implemented.')
-}
 
